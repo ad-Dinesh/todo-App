@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To-Do App — Mid Level</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="todo-app">
+      <header class="app-header">
+        <div class="title-wrap">
+          <h1>To-Do List</h1>
+          <img src="images/icon.png" alt="icon" class="app-icon"/>
+        </div>
+
+        <div class="header-right">
+          <div class="counts" id="counts">0 / 0</div>
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </header>
+
+      <section class="add-row">
+        <input id="input-box" placeholder="Add a new task..." />
+        <select id="priority-select" aria-label="Priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button id="add-btn">Add</button>
+      </section>
+
+      <ul id="list-container" class="task-list" aria-live="polite"></ul>
+
+      <div class="empty-state" id="empty-state">
+        <p>You're all caught up 🎉</p>
+        <small>Add a new task to get started</small>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
